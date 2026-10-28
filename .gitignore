@@ -1,0 +1,24 @@
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.matplotlib_cache/
+.venv/
+venv/
+.DS_Store
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Temporary document and presentation previews
+work/report_build/render/
+work/report_build/final_render/
+work/deck_build/*
+!work/deck_build/build_presentation.mjs
+!work/deck_build/qa.md
+node_modules/
+*.log

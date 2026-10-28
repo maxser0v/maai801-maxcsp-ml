@@ -1,0 +1,43 @@
+{
+  "selection_basis": "validation MAE only; exact tie favors Decision Tree",
+  "selected_model": "Random Forest",
+  "dt_params": {
+    "max_depth": 8,
+    "min_samples_leaf": 10,
+    "random_state": 42
+  },
+  "rf_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "dt_validation_mae": 0.5182701392601263,
+  "rf_validation_mae": 0.5147741198888189,
+  "refit_policy": "Refit both locked configurations on all 160 training instances before final test.",
+  "dt_test_mae": 0.4439339250580284,
+  "rf_test_mae": 0.43654938549964534,
+  "n_states": 200,
+  "n_test_candidates": 1600,
+  "n_test_instances": 40,
+  "mean_starting_violations": 7.63,
+  "heuristic_mean_improvement": 1.565,
+  "ml_mean_improvement": 1.69,
+  "heuristic_mean_violations_after": 6.065,
+  "ml_mean_violations_after": 5.94,
+  "wins": 23,
+  "ties": 172,
+  "losses": 5,
+  "variable_disagreement_count": 40,
+  "mean_gain_difference": 0.125,
+  "instance_wins": 18,
+  "instance_ties": 20,
+  "instance_losses": 2,
+  "environment": {
+    "python": "3.11.7",
+    "pandas": "2.2.3",
+    "numpy": "2.2.1",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.10.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "selection_basis": "validation MAE only; exact tie favors Decision Tree",
+  "selected_model": "Random Forest",
+  "dt_params": {
+    "max_depth": 8,
+    "min_samples_leaf": 10,
+    "random_state": 42
+  },
+  "rf_params": {
+    "n_estimators": 200,
+    "max_depth": null,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "dt_validation_mae": 0.5182701392601263,
+  "rf_validation_mae": 0.5147741198888189,
+  "refit_policy": "Refit both locked configurations on all 160 training instances before final test."
+}
