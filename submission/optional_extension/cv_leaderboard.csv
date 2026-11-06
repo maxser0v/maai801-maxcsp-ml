@@ -1,0 +1,46 @@
+trial_id,family,label,params,cv_mae,cv_mean_actual_gain,heuristic_mean_actual_gain,cv_relative_gain_percent,elapsed_seconds
+trial_000,Random Forest,Original Random Forest,"{""max_depth"": null, ""min_samples_leaf"": 5, ""n_estimators"": 200}",0.4590188236645932,1.68,1.67625,0.22371364653244186,1.03
+trial_001,Decision Tree,Decision Tree,"{""max_depth"": 5, ""min_samples_leaf"": 20}",0.47653526721212586,1.62875,1.67625,-2.8337061894108895,0.02
+trial_002,Decision Tree,Decision Tree,"{""max_depth"": 8, ""min_samples_leaf"": 20}",0.46548582245985565,1.64,1.67625,-2.162565249813575,0.02
+trial_003,Decision Tree,Decision Tree,"{""max_depth"": 10, ""min_samples_leaf"": 10}",0.47167543404509743,1.62125,1.67625,-3.281133482475762,0.02
+trial_004,Decision Tree,Decision Tree,"{""max_depth"": null, ""min_samples_leaf"": 20}",0.4679434973886673,1.64125,1.67625,-2.0879940343027537,0.02
+trial_005,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.46650762298029846,1.66875,1.67625,-0.4474272930648837,1.6
+trial_006,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 1.0, ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.4678665815239282,1.66625,1.67625,-0.5965697240865042,2.1
+trial_007,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 5, ""n_estimators"": 300}",0.45732133045689055,1.68875,1.67625,0.7457121551081247,1.48
+trial_008,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.45440686520135926,1.69,1.67625,0.8202833706189461,1.18
+trial_009,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 1.0, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.4552835499407176,1.685,1.67625,0.5219985085756829,1.43
+trial_010,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 20, ""n_estimators"": 300}",0.4545359896656576,1.6825,1.67625,0.37285607755406236,1.21
+trial_011,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 1.0, ""min_samples_leaf"": 20, ""n_estimators"": 300}",0.45531298031665146,1.685,1.67625,0.5219985085756829,1.33
+trial_012,Extra Trees,Extra Trees,"{""max_features"": 0.7, ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.4666350965005686,1.65125,1.67625,-1.4914243102162494,0.99
+trial_013,Extra Trees,Extra Trees,"{""max_features"": 1.0, ""min_samples_leaf"": 2, ""n_estimators"": 300}",0.4706072887921472,1.64,1.67625,-2.162565249813575,1.25
+trial_014,Extra Trees,Extra Trees,"{""max_features"": 0.7, ""min_samples_leaf"": 5, ""n_estimators"": 300}",0.4553820276421362,1.67375,1.67625,-0.1491424310216205,0.83
+trial_015,Extra Trees,Extra Trees,"{""max_features"": 1.0, ""min_samples_leaf"": 5, ""n_estimators"": 300}",0.4572586792124504,1.67125,1.67625,-0.2982848620432632,1.02
+trial_016,Extra Trees,Extra Trees,"{""max_features"": 0.7, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.45566055856705623,1.68375,1.67625,0.4474272930648837,0.75
+trial_017,Extra Trees,Extra Trees,"{""max_features"": 1.0, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.45408236781835126,1.695,1.67625,1.118568232662187,0.88
+trial_018,Extra Trees,Extra Trees,"{""max_features"": 0.7, ""min_samples_leaf"": 20, ""n_estimators"": 300}",0.4607135290623873,1.68,1.67625,0.22371364653244186,0.69
+trial_019,Extra Trees,Extra Trees,"{""max_features"": 1.0, ""min_samples_leaf"": 20, ""n_estimators"": 300}",0.45636581892420724,1.67875,1.67625,0.1491424310216205,0.95
+trial_020,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""squared_error"", ""max_iter"": 220, ""max_leaf_nodes"": 7, ""min_samples_leaf"": 30}",0.4631789133947312,1.6975,1.67625,1.2677106636838076,0.3
+trial_021,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""squared_error"", ""max_iter"": 220, ""max_leaf_nodes"": 15, ""min_samples_leaf"": 20}",0.4618991826099983,1.69625,1.67625,1.1931394481730084,0.41
+trial_022,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""squared_error"", ""max_iter"": 220, ""max_leaf_nodes"": 31, ""min_samples_leaf"": 20}",0.46698113995222884,1.67625,1.67625,0.0,0.88
+trial_023,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""poisson"", ""max_iter"": 220, ""max_leaf_nodes"": 7, ""min_samples_leaf"": 30}",0.45214561446397583,1.7,1.67625,1.4168530947054503,0.29
+trial_024,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""poisson"", ""max_iter"": 220, ""max_leaf_nodes"": 15, ""min_samples_leaf"": 20}",0.45592290075025743,1.695,1.67625,1.118568232662187,0.41
+trial_025,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""poisson"", ""max_iter"": 220, ""max_leaf_nodes"": 31, ""min_samples_leaf"": 20}",0.45943446250893993,1.68125,1.67625,0.298284862043241,0.64
+trial_026,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""absolute_error"", ""max_iter"": 220, ""max_leaf_nodes"": 7, ""min_samples_leaf"": 30}",0.4825107855279467,1.365,1.67625,-18.568232662192397,0.37
+trial_027,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""absolute_error"", ""max_iter"": 220, ""max_leaf_nodes"": 15, ""min_samples_leaf"": 20}",0.459304535603372,1.3825,1.67625,-17.52423564504101,0.59
+trial_028,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""absolute_error"", ""max_iter"": 220, ""max_leaf_nodes"": 31, ""min_samples_leaf"": 20}",0.4392280947301694,1.615,1.67625,-3.6539895600298355,0.95
+trial_029,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""squared_error"", ""max_depth"": 2, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4755667114313317,1.6875,1.67625,0.6711409395973034,0.94
+trial_030,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""squared_error"", ""max_depth"": 3, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.46188334208730686,1.6975,1.67625,1.2677106636838076,1.3
+trial_031,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""squared_error"", ""max_depth"": 4, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4610356851362448,1.68875,1.67625,0.7457121551081247,1.76
+trial_032,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""huber"", ""max_depth"": 2, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4729991838325114,1.7025,1.67625,1.5659955257270708,1.58
+trial_033,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""huber"", ""max_depth"": 3, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4588360879651114,1.705,1.67625,1.7151379567486913,2.16
+trial_034,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""huber"", ""max_depth"": 4, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4605578045657991,1.68875,1.67625,0.7457121551081247,2.99
+trial_035,SVR,SVR,"{""C"": 1, ""epsilon"": 0.1, ""gamma"": ""scale""}",0.43839856871618393,1.70875,1.67625,1.9388516032811332,1.42
+trial_036,SVR,SVR,"{""C"": 1, ""epsilon"": 0.3, ""gamma"": ""scale""}",0.47809212510036647,1.70375,1.67625,1.6405667412378921,1.26
+trial_037,SVR,SVR,"{""C"": 10, ""epsilon"": 0.1, ""gamma"": ""scale""}",0.44329950077144553,1.705,1.67625,1.7151379567486913,1.79
+trial_038,SVR,SVR,"{""C"": 10, ""epsilon"": 0.3, ""gamma"": ""scale""}",0.47336535328835405,1.7025,1.67625,1.5659955257270708,1.52
+trial_039,SVR,SVR,"{""C"": 50, ""epsilon"": 0.1, ""gamma"": ""scale""}",0.4489756338327588,1.685,1.67625,0.5219985085756829,3.25
+trial_040,SVR,SVR,"{""C"": 50, ""epsilon"": 0.3, ""gamma"": ""scale""}",0.48533801335104215,1.69375,1.67625,1.043997017151388,2.55
+trial_041,KNN,KNN,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.48275567381244144,1.6125,1.67625,-3.803131991051456,0.07
+trial_042,KNN,KNN,"{""n_neighbors"": 40, ""weights"": ""distance""}",0.48558710748946,1.6125,1.67625,-3.803131991051456,0.07
+trial_043,KNN,KNN,"{""n_neighbors"": 100, ""weights"": ""distance""}",0.49456999423296794,1.605,1.67625,-4.250559284116329,0.07
+trial_044,Ridge,Ridge,"{""alpha"": 10.0}",0.4963363345428792,1.67875,1.67625,0.1491424310216205,0.02

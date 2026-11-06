@@ -1,39 +1,46 @@
 # Machine learning guided variable selection for Max-CSP
 
-MAAI801 Foundation of AI mini-project comparing a percentage-based variable-selection heuristic with supervised regression on synthetic constraint satisfaction problems.
+This MAAI801 mini-project asks whether a learned model can choose a more useful variable to change than a simple percentage rule. Both methods start from the same assignment and use the same procedure to change the chosen variable. We compare how many constraint violations each move removes.
 
-The experiment predicts the benefit of changing one variable, then evaluates whether the selected variable reduces more constraint violations. It studies one-step selection rather than a complete Genetic Algorithm.
+## Reports and deliverables
 
-## Results
+- [Main assignment report](submission/report.docx): the required Decision Tree and Random Forest comparison, with methods, figures, results, and discussion.
+- [Additional model experiments](experiments/model_search/RESULTS.md): the wider search across eight model families and evaluation on fresh synthetic problems.
+- [Completed notebook](submission/completed_student.ipynb): runnable code with saved outputs.
+- [Presentation](submission/presentation.pptx): nine editable slides with speaker notes.
+- [Beginner explanation](ASSIGNMENT_EXPLAINED.md): a plain-language introduction to the problem and workflow.
+- [Downloadable package](MAAI801_Completed_Project.zip): the main deliverables, required inputs, and a copy of the optional experiment report and summary results.
+- [Execution plan](ASSIGNMENT_PLAN.md): the original plan and division of tasks.
 
-Both model families were tuned on the same instance-grouped validation split. The Random Forest was selected by validation MAE before final testing; both selected configurations were then refit on all training instances.
+Both reports have been revised for clearer, more natural prose. The numerical results and experimental methods are unchanged.
+
+## Main experiment
+
+We tuned both required models on the same grouped validation split. All records from a problem instance stayed together. The forest had the lower validation error, so we selected it before testing and refit both chosen configurations on all training instances.
 
 | Model | Validation MAE | Test MAE |
 |---|---:|---:|
 | Decision Tree | 0.518270 | 0.443934 |
 | Random Forest | 0.514774 | 0.436549 |
 
-On 200 test states from 40 held-out instances:
+On 200 states from 40 held-out instances, the forest removed 1.690 violations per state on average, compared with 1.565 for the percentage heuristic. It recorded 23 wins, 172 ties, and 5 losses. The mean advantage was 0.125 violations per state, about 8% above the heuristic's mean gain.
 
-| Metric | Percentage heuristic | ML selection |
+## Additional models
+
+The optional extension tested 45 configurations across Decision Tree, Random Forest, Extra Trees, Histogram Gradient Boosting, Gradient Boosting, Support Vector Regression (SVR), K-nearest-neighbor regression, and Ridge regression. Four-fold cross-validation grouped by instance selected a standardized SVR.
+
+| Improvement over the heuristic | Original forest | Selected SVR |
 |---|---:|---:|
-| Mean violations removed | 1.565 | 1.690 |
-| Mean remaining violations | 6.065 | 5.940 |
+| Original 200 states, previously evaluated | 7.99% | 7.03% |
+| Fresh 2,500 states from 500 instances | 1.76% | 3.31% |
 
-ML achieved 23 wins, 172 ties, and 5 losses. The observed average gain was 0.125 violations per state, approximately 8% above the heuristic's mean. This result is limited to the supplied synthetic one-step setting and makes no runtime or complete-GA claim.
+SVR did not exceed the original 8% result on the original sample. It did perform better than the forest on the larger fresh sample. The [extension report](experiments/model_search/RESULTS.md) explains the selection process, uncertainty, and why percentages from different samples need careful interpretation.
 
-## Start here
+Both experiments concern one-step moves on synthetic problems. They do not measure a complete Genetic Algorithm or establish a runtime advantage.
 
-- [Simple explanation for beginners](ASSIGNMENT_EXPLAINED.md)
-- [Completed notebook with saved outputs](submission/completed_student.ipynb)
-- [Eight-page report](submission/report.docx)
-- [Nine-slide presentation with speaker notes](submission/presentation.pptx)
-- [Execution and delegation plan](ASSIGNMENT_PLAN.md)
-- [Downloadable project package](MAAI801_Completed_Project.zip)
+## Run the notebook
 
-## Run the experiment
-
-Python 3.11 was used for the verified run.
+The verified run used Python 3.11. Create an environment and install the recorded analysis dependencies:
 
 ```bash
 python3 -m venv .venv
@@ -42,9 +49,9 @@ python3 -m pip install -r submission/requirements.txt
 jupyter notebook submission/completed_student.ipynb
 ```
 
-Run all notebook cells in order. The notebook locates the supplied inputs in this repository and writes results and figures to the current working directory. For Colab instructions, see [submission setup](submission/README.md).
+Run the cells in order. The notebook finds the supplied inputs and saves figures and result tables in the current working directory. See the [package instructions](submission/README.md) for Google Colab setup.
 
-To reproduce the component workflow from the repository root:
+The component scripts can also be run from the repository root:
 
 ```bash
 python3 work/data_exploration.py
@@ -53,22 +60,25 @@ python3 work/random_forest.py
 python3 work/run_final_evaluation.py
 ```
 
-The final command reruns the frozen experiment for reproducibility. Do not use the held-out test results to retune the models.
+These commands reproduce the declared main experiment. The final test results should not be used to choose new parameters. Instructions for the optional search are in its [README](experiments/model_search/README.md).
 
-## Repository layout
+## Files in this repository
 
-- `submission/`: deliverables and self-contained notebook inputs.
-- `supplied/`: original instructor starter package, extracted without modifying its helpers.
-- `work/`: analysis modules, authoring scripts, notes, and verification records.
-- `results/`: split manifest, tuning tables, model-selection record, and final measurements.
-- `figures/`: training exploration and final comparison plots.
+| Directory | Contents |
+|---|---|
+| `submission/` | Final assignment files and the inputs needed by the notebook |
+| `supplied/` | The extracted instructor package, with its original helpers |
+| `work/` | Analysis and document-building scripts, notes, and verification records |
+| `results/` | Main-experiment split, tuning, model-selection, and evaluation records |
+| `figures/` | Main-experiment charts |
+| `experiments/model_search/` | Optional search code, fitted models, fresh data, scores, and report |
 
-The notebook and ML scripts are reproducible using the listed Python dependencies. Report generation additionally uses `python-docx`. The presentation authoring script uses the Codex-bundled `@oai/artifact-tool` and presentation skill resources; exported slides can be opened independently in PowerPoint-compatible software.
+The report builder also needs `python-docx`. The slide authoring script uses the Codex-bundled `@oai/artifact-tool` and presentation skill resources; the exported deck can be opened independently in PowerPoint-compatible software.
 
-## Attribution and project status
+## Attribution and submission status
 
-The course supplied the assignment, synthetic data, generator, starter notebook, and constraint/mutation helpers. AI assistance generated the implementation, analysis, and draft deliverables. The [contribution statement](submission/contribution_statement.md) still requires the team's actual names and contributions before academic submission. No submission to Moodle has been performed.
+The course supplied the assignment, data generator, synthetic data, starter notebook, and constraint/mutation helpers. AI assistance generated the implementation, analysis, and initial drafts. The [contribution statement](submission/contribution_statement.md) still needs the team's actual names and contributions before academic submission. Nothing has been submitted to Moodle.
 
-Original supplied course materials retain their existing ownership and terms; this repository does not assign them a new license.
+The original course materials retain their existing ownership and terms. This repository does not assign them a new license.
 
 Research motivation: Ben Othman, H., & Tagina, M. (2015). *Guided Genetic Algorithm: A New Template Concept*. Procedia Computer Science, 60, 1101–1108. [DOI](https://doi.org/10.1016/j.procs.2015.08.156).

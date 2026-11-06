@@ -1,0 +1,200 @@
+[
+  {
+    "dataset": "original_test_exploratory",
+    "model": "original_forest",
+    "states": 200,
+    "instances": 40,
+    "mae": 0.43654938549964534,
+    "mean_actual_gain": 1.69,
+    "heuristic_mean_gain": 1.565,
+    "relative_gain_percent": 7.987220447284349,
+    "wins": 23,
+    "ties": 172,
+    "losses": 5,
+    "mean_gain_above_heuristic": 0.125,
+    "gain_difference_cluster_95ci": [
+      0.06999999999999999,
+      0.185
+    ],
+    "mean_gain_above_original_forest": 0.0,
+    "gain_above_original_cluster_95ci": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "dataset": "original_test_exploratory",
+    "model": "selection_champion",
+    "states": 200,
+    "instances": 40,
+    "mae": 0.41323657332640906,
+    "mean_actual_gain": 1.675,
+    "heuristic_mean_gain": 1.565,
+    "relative_gain_percent": 7.028753993610226,
+    "wins": 18,
+    "ties": 180,
+    "losses": 2,
+    "mean_gain_above_heuristic": 0.11,
+    "gain_difference_cluster_95ci": [
+      0.05500000000000001,
+      0.175
+    ],
+    "mean_gain_above_original_forest": -0.015,
+    "gain_above_original_cluster_95ci": [
+      -0.045000000000000005,
+      0.010000000000000002
+    ]
+  },
+  {
+    "dataset": "original_test_exploratory",
+    "model": "mae_champion",
+    "states": 200,
+    "instances": 40,
+    "mae": 0.41323657332640906,
+    "mean_actual_gain": 1.675,
+    "heuristic_mean_gain": 1.565,
+    "relative_gain_percent": 7.028753993610226,
+    "wins": 18,
+    "ties": 180,
+    "losses": 2,
+    "mean_gain_above_heuristic": 0.11,
+    "gain_difference_cluster_95ci": [
+      0.05500000000000001,
+      0.175
+    ],
+    "mean_gain_above_original_forest": -0.015,
+    "gain_above_original_cluster_95ci": [
+      -0.045000000000000005,
+      0.010000000000000002
+    ]
+  },
+  {
+    "dataset": "fresh_test",
+    "model": "original_forest",
+    "states": 2500,
+    "instances": 500,
+    "mae": 0.4563695531356909,
+    "mean_actual_gain": 1.7828,
+    "heuristic_mean_gain": 1.752,
+    "relative_gain_percent": 1.757990867579906,
+    "wins": 152,
+    "ties": 2252,
+    "losses": 96,
+    "mean_gain_above_heuristic": 0.0308,
+    "gain_difference_cluster_95ci": [
+      0.0128,
+      0.0496
+    ],
+    "mean_gain_above_original_forest": 0.0,
+    "gain_above_original_cluster_95ci": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "dataset": "fresh_test",
+    "model": "selection_champion",
+    "states": 2500,
+    "instances": 500,
+    "mae": 0.43786663555944505,
+    "mean_actual_gain": 1.81,
+    "heuristic_mean_gain": 1.752,
+    "relative_gain_percent": 3.3105022831050324,
+    "wins": 149,
+    "ties": 2304,
+    "losses": 47,
+    "mean_gain_above_heuristic": 0.058,
+    "gain_difference_cluster_95ci": [
+      0.042,
+      0.0752
+    ],
+    "mean_gain_above_original_forest": 0.0272,
+    "gain_above_original_cluster_95ci": [
+      0.0152,
+      0.04
+    ]
+  },
+  {
+    "dataset": "fresh_test",
+    "model": "mae_champion",
+    "states": 2500,
+    "instances": 500,
+    "mae": 0.43786663555944505,
+    "mean_actual_gain": 1.81,
+    "heuristic_mean_gain": 1.752,
+    "relative_gain_percent": 3.3105022831050324,
+    "wins": 149,
+    "ties": 2304,
+    "losses": 47,
+    "mean_gain_above_heuristic": 0.058,
+    "gain_difference_cluster_95ci": [
+      0.042,
+      0.0752
+    ],
+    "mean_gain_above_original_forest": 0.0272,
+    "gain_above_original_cluster_95ci": [
+      0.0152,
+      0.04
+    ]
+  },
+  {
+    "dataset": "fresh_seed_2026110601",
+    "model": "original_forest",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.7656,
+    "heuristic_mean_gain": 1.7416,
+    "relative_gain_percent": 1.3780431786862612,
+    "mean_gain_above_original_forest": 0.0
+  },
+  {
+    "dataset": "fresh_seed_2026110601",
+    "model": "selection_champion",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.7928,
+    "heuristic_mean_gain": 1.7416,
+    "relative_gain_percent": 2.9398254478640196,
+    "mean_gain_above_original_forest": 0.0272
+  },
+  {
+    "dataset": "fresh_seed_2026110601",
+    "model": "mae_champion",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.7928,
+    "heuristic_mean_gain": 1.7416,
+    "relative_gain_percent": 2.9398254478640196,
+    "mean_gain_above_original_forest": 0.0272
+  },
+  {
+    "dataset": "fresh_seed_2026110602",
+    "model": "original_forest",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.8,
+    "heuristic_mean_gain": 1.7624,
+    "relative_gain_percent": 2.133454380390387,
+    "mean_gain_above_original_forest": 0.0
+  },
+  {
+    "dataset": "fresh_seed_2026110602",
+    "model": "selection_champion",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.8272,
+    "heuristic_mean_gain": 1.7624,
+    "relative_gain_percent": 3.6768043576940412,
+    "mean_gain_above_original_forest": 0.0272
+  },
+  {
+    "dataset": "fresh_seed_2026110602",
+    "model": "mae_champion",
+    "states": 1250,
+    "instances": 250,
+    "mean_actual_gain": 1.8272,
+    "heuristic_mean_gain": 1.7624,
+    "relative_gain_percent": 3.6768043576940412,
+    "mean_gain_above_original_forest": 0.0272
+  }
+]

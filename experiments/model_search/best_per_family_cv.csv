@@ -1,0 +1,9 @@
+trial_id,family,label,params,cv_mae,cv_mean_actual_gain,heuristic_mean_actual_gain,cv_relative_gain_percent,elapsed_seconds
+trial_035,SVR,SVR,"{""C"": 1, ""epsilon"": 0.1, ""gamma"": ""scale""}",0.4383985687161839,1.70875,1.67625,1.9388516032811332,1.42
+trial_033,Gradient Boosting,Gradient Boosting,"{""learning_rate"": 0.04, ""loss"": ""huber"", ""max_depth"": 3, ""min_samples_leaf"": 15, ""n_estimators"": 220}",0.4588360879651114,1.705,1.67625,1.7151379567486913,2.16
+trial_023,Histogram Boosting,Histogram Boosting,"{""l2_regularization"": 2.0, ""learning_rate"": 0.05, ""loss"": ""poisson"", ""max_iter"": 220, ""max_leaf_nodes"": 7, ""min_samples_leaf"": 30}",0.4521456144639758,1.7,1.67625,1.4168530947054505,0.29
+trial_017,Extra Trees,Extra Trees,"{""max_features"": 1.0, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.4540823678183512,1.695,1.67625,1.118568232662187,0.88
+trial_008,Random Forest,Random Forest,"{""max_depth"": null, ""max_features"": 0.7, ""min_samples_leaf"": 10, ""n_estimators"": 300}",0.4544068652013592,1.69,1.67625,0.8202833706189461,1.18
+trial_044,Ridge,Ridge,"{""alpha"": 10.0}",0.4963363345428792,1.67875,1.67625,0.1491424310216205,0.02
+trial_004,Decision Tree,Decision Tree,"{""max_depth"": null, ""min_samples_leaf"": 20}",0.4679434973886673,1.64125,1.67625,-2.0879940343027537,0.02
+trial_041,KNN,KNN,"{""n_neighbors"": 15, ""weights"": ""distance""}",0.4827556738124414,1.6125,1.67625,-3.803131991051456,0.07

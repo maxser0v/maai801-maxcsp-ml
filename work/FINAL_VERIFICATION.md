@@ -8,3 +8,7 @@
 - Four meaningful figures produced; prediction and actual decision outcomes reported separately.
 - No upload or external submission performed.
 - Remaining user information: actual team names and contributions for contribution_statement.md. This table is explicitly incomplete and must be filled truthfully before submission.
+
+## Report revision on 6 November 2026
+
+Both report texts were revised for readability without rerunning the models or changing measured results. The main Word report was rendered and all eight pages inspected. The optional report and its editorial source match, its package copy is synchronized, and README links were checked. The refreshed downloadable package includes the optional report and summary tables.

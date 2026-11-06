@@ -1,0 +1,56 @@
+{
+  "protocol_sha256": "5e646673037bf904cac1bbdf4cecc9a0ff9d4e7f0f27f802fa63dfa7b45f28e2",
+  "primary": {
+    "id": "trial_035",
+    "family": "SVR",
+    "params": {
+      "C": 1,
+      "epsilon": 0.1,
+      "gamma": "scale"
+    },
+    "label": "SVR"
+  },
+  "mae_champion": {
+    "id": "trial_035",
+    "family": "SVR",
+    "params": {
+      "C": 1,
+      "epsilon": 0.1,
+      "gamma": "scale"
+    },
+    "label": "SVR"
+  },
+  "baseline": {
+    "id": "trial_000",
+    "family": "Random Forest",
+    "params": {
+      "n_estimators": 200,
+      "min_samples_leaf": 5,
+      "max_depth": null
+    },
+    "label": "Original Random Forest"
+  },
+  "primary_cv": {
+    "trial_id": "trial_035",
+    "family": "SVR",
+    "label": "SVR",
+    "params": "{\"C\": 1, \"epsilon\": 0.1, \"gamma\": \"scale\"}",
+    "cv_mae": 0.43839856871618393,
+    "cv_mean_actual_gain": 1.70875,
+    "heuristic_mean_actual_gain": 1.67625,
+    "cv_relative_gain_percent": 1.9388516032811332,
+    "elapsed_seconds": 1.42
+  },
+  "mae_champion_cv": {
+    "trial_id": "trial_035",
+    "family": "SVR",
+    "label": "SVR",
+    "params": "{\"C\": 1, \"epsilon\": 0.1, \"gamma\": \"scale\"}",
+    "cv_mae": 0.43839856871618393,
+    "cv_mean_actual_gain": 1.70875,
+    "heuristic_mean_actual_gain": 1.67625,
+    "cv_relative_gain_percent": 1.9388516032811332,
+    "elapsed_seconds": 1.42
+  },
+  "note": "Frozen using training-only grouped cross-validation before final extension evaluation."
+}

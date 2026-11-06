@@ -1,0 +1,532 @@
+{
+  "purpose": "Optional extension: improve actual one-step selection gain.",
+  "inputs": "Only six supplied pre-mutation features; fit only original training instances.",
+  "folds": 4,
+  "group": "instance_id",
+  "shuffle": true,
+  "cv_seed": 20261106,
+  "primary_selection": [
+    "highest pooled out-of-fold actual mean selection gain",
+    "lowest out-of-fold MAE",
+    "lexical trial id"
+  ],
+  "secondary_selection": [
+    "lowest out-of-fold MAE",
+    "highest out-of-fold actual mean selection gain",
+    "lexical trial id"
+  ],
+  "test_policy": "Original 40-instance test already viewed previously; report as exploratory. Evaluate only two locked champions plus original baseline; never retune from test or fresh results.",
+  "fresh_policy": {
+    "seeds": [
+      2026110601,
+      2026110602
+    ],
+    "instances_per_seed": 250,
+    "states_per_instance": 5,
+    "n_vars": 8,
+    "domain_size": 4,
+    "density": [
+      0.25,
+      0.45,
+      0.65,
+      0.85
+    ],
+    "tightness": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "source": "Exact distribution and helpers from supplied generate_dataset.py; separate seed streams, no fresh training."
+  },
+  "trials": [
+    {
+      "id": "trial_000",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 200,
+        "min_samples_leaf": 5,
+        "max_depth": null
+      },
+      "label": "Original Random Forest"
+    },
+    {
+      "id": "trial_001",
+      "family": "Decision Tree",
+      "params": {
+        "max_depth": 5,
+        "min_samples_leaf": 20
+      },
+      "label": "Decision Tree"
+    },
+    {
+      "id": "trial_002",
+      "family": "Decision Tree",
+      "params": {
+        "max_depth": 8,
+        "min_samples_leaf": 20
+      },
+      "label": "Decision Tree"
+    },
+    {
+      "id": "trial_003",
+      "family": "Decision Tree",
+      "params": {
+        "max_depth": 10,
+        "min_samples_leaf": 10
+      },
+      "label": "Decision Tree"
+    },
+    {
+      "id": "trial_004",
+      "family": "Decision Tree",
+      "params": {
+        "max_depth": null,
+        "min_samples_leaf": 20
+      },
+      "label": "Decision Tree"
+    },
+    {
+      "id": "trial_005",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 0.7,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_006",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 1.0,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_007",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 5,
+        "max_features": 0.7,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_008",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 10,
+        "max_features": 0.7,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_009",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 10,
+        "max_features": 1.0,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_010",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 20,
+        "max_features": 0.7,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_011",
+      "family": "Random Forest",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 20,
+        "max_features": 1.0,
+        "max_depth": null
+      },
+      "label": "Random Forest"
+    },
+    {
+      "id": "trial_012",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 0.7
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_013",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 2,
+        "max_features": 1.0
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_014",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 5,
+        "max_features": 0.7
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_015",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 5,
+        "max_features": 1.0
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_016",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 10,
+        "max_features": 0.7
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_017",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 10,
+        "max_features": 1.0
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_018",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 20,
+        "max_features": 0.7
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_019",
+      "family": "Extra Trees",
+      "params": {
+        "n_estimators": 300,
+        "min_samples_leaf": 20,
+        "max_features": 1.0
+      },
+      "label": "Extra Trees"
+    },
+    {
+      "id": "trial_020",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "squared_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 30,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_021",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "squared_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_022",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "squared_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_023",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "poisson",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 30,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_024",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "poisson",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_025",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "poisson",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_026",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "absolute_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 7,
+        "min_samples_leaf": 30,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_027",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "absolute_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_028",
+      "family": "Histogram Boosting",
+      "params": {
+        "loss": "absolute_error",
+        "max_iter": 220,
+        "learning_rate": 0.05,
+        "max_leaf_nodes": 31,
+        "min_samples_leaf": 20,
+        "l2_regularization": 2.0
+      },
+      "label": "Histogram Boosting"
+    },
+    {
+      "id": "trial_029",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "squared_error",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_030",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "squared_error",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 3,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_031",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "squared_error",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 4,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_032",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "huber",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 2,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_033",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "huber",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 3,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_034",
+      "family": "Gradient Boosting",
+      "params": {
+        "loss": "huber",
+        "n_estimators": 220,
+        "learning_rate": 0.04,
+        "max_depth": 4,
+        "min_samples_leaf": 15
+      },
+      "label": "Gradient Boosting"
+    },
+    {
+      "id": "trial_035",
+      "family": "SVR",
+      "params": {
+        "C": 1,
+        "epsilon": 0.1,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_036",
+      "family": "SVR",
+      "params": {
+        "C": 1,
+        "epsilon": 0.3,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_037",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "epsilon": 0.1,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_038",
+      "family": "SVR",
+      "params": {
+        "C": 10,
+        "epsilon": 0.3,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_039",
+      "family": "SVR",
+      "params": {
+        "C": 50,
+        "epsilon": 0.1,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_040",
+      "family": "SVR",
+      "params": {
+        "C": 50,
+        "epsilon": 0.3,
+        "gamma": "scale"
+      },
+      "label": "SVR"
+    },
+    {
+      "id": "trial_041",
+      "family": "KNN",
+      "params": {
+        "n_neighbors": 15,
+        "weights": "distance"
+      },
+      "label": "KNN"
+    },
+    {
+      "id": "trial_042",
+      "family": "KNN",
+      "params": {
+        "n_neighbors": 40,
+        "weights": "distance"
+      },
+      "label": "KNN"
+    },
+    {
+      "id": "trial_043",
+      "family": "KNN",
+      "params": {
+        "n_neighbors": 100,
+        "weights": "distance"
+      },
+      "label": "KNN"
+    },
+    {
+      "id": "trial_044",
+      "family": "Ridge",
+      "params": {
+        "alpha": 10.0
+      },
+      "label": "Ridge"
+    }
+  ],
+  "sklearn_version": "1.8.0"
+}

@@ -1,33 +1,44 @@
 # MAAI801 project package
 
-## Files
+Start with `report.docx` for the main experiment, or open `completed_student.ipynb` to follow the code and results. The report compares the two required models, Decision Tree and Random Forest. The wider search across eight model families is described separately in `optional_extension/RESULTS.md`.
 
-- `completed_student.ipynb`: completed and executed notebook with saved outputs and interpretations.
-- `report.docx`: editable eight-page report.
-- `presentation.pptx`: nine editable slides with speaker notes and source citations.
-- `contribution_statement.md`: AI assistance record and team table requiring actual names and contributions before submission.
-- `candidate_dataset.csv`, `states.csv`, `instances.json`, `maxcsp_tools.py`: unchanged supplied inputs/helpers needed to run the notebook.
-- `results/`: split manifest, tuning tables, frozen selection record, prediction metrics, state/instance comparisons, and summary JSON.
-- `figures/`: two training EDA figures and two final comparison figures.
-- `requirements.txt`: analysis packages used in the verified run.
+The reports have been revised for clearer wording. Their methods, measurements, and conclusions have not changed.
+
+## Contents
+
+| File or folder | Purpose |
+|---|---|
+| `completed_student.ipynb` | Executed notebook with the analysis, figures, and interpretations |
+| `report.docx` | Editable main assignment report |
+| `presentation.pptx` | Nine editable slides with speaker notes and citations |
+| `contribution_statement.md` | Record of AI assistance and a table for the team's actual contributions |
+| `candidate_dataset.csv`, `states.csv`, `instances.json`, `maxcsp_tools.py` | Original inputs and helpers needed to run the notebook |
+| `results/` | Split manifest, tuning scores, selected settings, and final comparisons |
+| `figures/` | Training exploration and final comparison plots |
+| `requirements.txt` | Python analysis dependencies |
+| `optional_extension/` | Additional-model report, comparison figure, and summary results |
 
 ## Run locally
 
-1. Extract the package into one directory.
-2. Open `completed_student.ipynb` in Jupyter using Python 3.
-3. Install packages from requirements.txt if needed, then restart the kernel and run all cells in order.
-4. Outputs are saved to `results/` and `figures/` in the current directory. Fixed seeds and instance grouping make the declared experiment reproducible.
+1. Extract the package into one folder.
+2. Install the packages in `requirements.txt` if needed.
+3. Open `completed_student.ipynb` in Jupyter with Python 3.
+4. Restart the kernel and run all cells in order.
+
+The notebook writes outputs to `results/` and `figures/` in the current directory. The recorded random seeds and instance grouping make the experiment reproducible. The verified package versions are listed in `requirements.txt` and `results/final_summary.json`.
 
 ## Run in Google Colab
 
-Upload `completed_student.ipynb`, then upload the original instructor student ZIP in the Colab Files panel, or upload the four input/helper files directly. The first cell locates or extracts the data. Colab normally includes the analysis packages. Save the notebook with outputs after execution. Exact results can vary slightly with package versions; the recorded versions are in final_summary.json and requirements.txt.
+Upload the completed notebook, then upload the original instructor ZIP or the four input/helper files listed above. The setup cell locates or extracts the data. Colab usually includes the analysis libraries. Save a copy of the executed notebook, because uploaded runtime files may disappear after a reset. Small numerical differences are possible with different package versions.
 
-## Result and scope
+## Reading the results
 
-Random Forest was selected using validation MAE, 0.514774 versus 0.518270 for the Decision Tree. Both frozen configurations were then refit on all supplied training instances. Test MAEs were 0.436549 and 0.443934 respectively.
+The main experiment selected the Random Forest using validation MAE: 0.514774, compared with 0.518270 for the tree. After refitting both configurations on all training instances, their test MAEs were 0.436549 and 0.443934 respectively.
 
-On 200 held-out states, mean actual improvement was 1.690 for ML and 1.565 for the heuristic. ML won 23 times, tied 172, and lost 5. This is a descriptive one-step comparison on synthetic instances, with no full genetic algorithm or runtime claim.
+On 200 test states, the forest removed an average of 1.690 violations per move, compared with 1.565 for the heuristic. It won 23 times, tied 172, and lost 5 times. The approximate 8% advantage describes this sample of synthetic states.
 
-## Before submitting
+In the optional extension, SVR reached 7.03% above the heuristic on that original sample. On 2,500 fresh states, it reached 3.31%, compared with 1.76% for the original forest. The extension therefore found a useful alternative without exceeding the original 8% score on its original benchmark. Full reproduction scripts and data are available in the [GitHub repository](https://github.com/maxser0v/maai801-maxcsp-ml/tree/main/experiments/model_search).
 
-Complete the contribution statement with real team details. Review all explanations and course AI-use requirements. Confirm Moodle deadline, accepted file formats, and whether supporting data are required. All four students should rehearse and understand the experiment. Nothing has been uploaded to Moodle.
+## Before submission
+
+Fill in the contribution statement with real team names and actual work. Review the explanations, check the course's AI-use requirements, and confirm the Moodle deadline and accepted formats. Each member should be able to explain the method and results. Nothing has been uploaded to Moodle.

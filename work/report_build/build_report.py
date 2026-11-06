@@ -19,6 +19,7 @@ styles['Title'].font.size=Pt(22);styles['Title'].font.bold=True
 styles['Heading 1'].font.size=Pt(17);styles['Heading 1'].paragraph_format.space_before=Pt(8)
 styles['Heading 2'].font.size=Pt(12);styles['Heading 2'].paragraph_format.space_before=Pt(9)
 styles['Caption'].font.size=Pt(9);styles['Caption'].font.italic=True;styles['Caption'].font.bold=False
+styles['Caption'].paragraph_format.keep_with_next=False
 # Remove inherited decorative borders from every paragraph style.
 for st in styles:
  for border in list(st.element.iter(qn('w:pBdr'))):
@@ -73,8 +74,9 @@ while i<len(lines):
   para('MAAI801 Foundation of AI     Experimental report','Subtitle');continue
  if line.startswith('## '):
   name=line[3:]
-  if re.match(r'[2-7]\. ',name):doc.add_page_break()
-  para(re.sub(r'[^\w\s]',' ',name),'Heading 1');continue
+  heading=para(re.sub(r'[^\w\s]',' ',name),'Heading 1')
+  heading.paragraph_format.page_break_before=bool(re.match(r'[2-7]\. ',name))
+  continue
  if line.startswith('### '):para(re.sub(r'[^\w\s]',' ',re.sub(r'^[0-9.]+\s*','',line[4:])),'Heading 2');continue
  if line.startswith('|'):
   ls=[line]
@@ -92,8 +94,8 @@ while i<len(lines):
  if line.startswith('- '):para(line[2:],'List Bullet');continue
  para(line)
 # Explicit scope disclosure without attributing work to nonexistent teammates.
-para('Preparation note','Heading 2')
-para('AI assistance generated the implementation, analysis, and draft deliverables. The submitting team must review the results, enter its actual member details and contribution record, and follow the course policy on AI assistance. No individual student contributions are asserted in this report.')
+para('Use of AI assistance','Heading 2')
+para('AI assistance was used to generate the implementation, analysis, and initial drafts. The accompanying contribution statement describes this assistance and provides space for individual team contributions.')
 doc.core_properties.title='Machine learning guided variable selection for Max CSP'
 doc.core_properties.author='MAAI801 project team'
 doc.save(P/'submission'/'report.docx')
